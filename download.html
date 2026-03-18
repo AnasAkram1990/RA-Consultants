@@ -212,12 +212,6 @@
     <div class="cursor" id="cursor"></div>
     <div id="canvas-container"></div>
 
-    <script>
-        (function() {
-            emailjs.init("YOUR_PUBLIC_KEY"); // Replace if needed
-        })();
-    </script>
-
     <nav class="fixed w-full z-50 py-4 glass border-b border-secondary/10">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3 space-y-2 group">
@@ -253,7 +247,7 @@
         </div>
     </nav>
 
- <section class="pt-32 pb-20">
+    <section class="pt-32 pb-20">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h1 class="text-5xl md:text-6xl font-bold font-display">Resource <span class="gradient-text">Centre</span></h1>
@@ -268,11 +262,12 @@
                 </h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- Income-Tax-Ordinance-2001-31.07.2025.pdf -->
-                    <div class="glass-card pdf-card rounded-2xl" data-pdf="pdfs/income-tax/Income-Tax-Ordinance-2001-31.07.2025.pdf">
+                    <div class="glass-card pdf-card rounded-2xl">
                         <i class="fas fa-file-pdf pdf-icon"></i>
                         <span class="pdf-name">Income-Tax-Ordinance-2001-31.07.2025.pdf</span>
-                        <span class="pdf-size">Fetching...</span>
-                        <a href="pdfs/income-tax/Income-Tax-Ordinance-2001-31.07.2025.pdf" download class="download-btn download-link">
+                        <!-- Manual file size: change this text to actual file size -->
+                        <span class="pdf-size">2.4 MB</span>
+                        <a href="pdfs/income-tax/Income-Tax-Ordinance-2001-31.07.2025.pdf" download class="download-btn">
                             <i class="fas fa-download"></i> Download
                         </a>
                     </div>
@@ -286,17 +281,16 @@
                 </h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- GST_Registration.pdf -->
-                    <div class="glass-card pdf-card rounded-2xl" data-pdf="pdfs/sales-tax/GST_Registration.pdf">
+                    <div class="glass-card pdf-card rounded-2xl">
                         <i class="fas fa-file-pdf pdf-icon"></i>
                         <span class="pdf-name">The-SaleslTax-Act-1990-11.03.2019.pdf</span>
-                        <span class="pdf-size">Fetching...</span>
-                        <a href="pdfs/sales-tax/The-SaleslTax-Act-1990-11.03.2019.pdf" download class="download-btn download-link">
+                        <!-- Manual file size: change this text -->
+                        <span class="pdf-size">1.8 MB</span>
+                        <a href="pdfs/sales-tax/The-SaleslTax-Act-1990-11.03.2019.pdf" download class="download-btn">
                             <i class="fas fa-download"></i> Download
                         </a>
                     </div>
-
-                    <!-- add more pdf here -->
-
+                    <!-- add more pdf cards here -->
                 </div>
             </div>
 
@@ -306,51 +300,47 @@
                     <i class="fas fa-building text-secondary mr-3"></i> SECP
                 </h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Company_Incorporation.pdf -->
-                    <div class="glass-card pdf-card rounded-2xl" data-pdf="pdfs/secp/ordinance_act.pdf">
+                    <!-- ordinance_act.pdf -->
+                    <div class="glass-card pdf-card rounded-2xl">
                         <i class="fas fa-file-pdf pdf-icon"></i>
                         <span class="pdf-name">ordinance_act.pdf</span>
-                        <span class="pdf-size">Fetching...</span>
-                        <a href="pdfs/secp/ordinance_act.pdf" download class="download-btn download-link">
+                        <!-- Manual file size: change this text -->
+                        <span class="pdf-size">3.1 MB</span>
+                        <a href="pdfs/secp/ordinance_act.pdf" download class="download-btn">
                             <i class="fas fa-download"></i> Download
                         </a>
                     </div>
-
                     <!-- add more pdf cards here -->
-
                 </div>
             </div>
         </div>
     </section>
 
-
     <footer class="bg-[#0a0c14] py-12 border-t border-secondary/10">
         <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0"> 
-                <a href="index.html" class="flex items-center gap-3 space-y-2 group">
-                    <!-- Logo -->
-                    <img src="images/logo.png" alt="RA Logo" class="h-10 w-auto object-contain align-middle">
-                    <!-- Text -->
-                    <span class="text-2xl font-semibold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-none">
-                        CONSULTANTS
-                    </span>
-                </a>
-                    <p class="text-slate-500 mt-2">© 2025 Muhammad Anas Akram. All rights reserved.</p>  
+            <!-- First row: Logo & copyright + Social icons -->
+            <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <a href="index.html" class="flex items-center gap-3 justify-center md:justify-start group">
+                        <img src="images/logo.png" alt="RA Logo" class="h-10 w-auto object-contain">
+                        <span class="text-2xl font-semibold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">CONSULTANTS</span>
+                    </a>
+                    <p class="text-slate-500 mt-2">© 2025 Muhammad Anas Akram. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-slate-400 hover:text-primary transition"><i class="fab fa-linkedin-in text-xl"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-primary transition"><i class="fab fa-x text-xl"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-primary transition"><i class="fas fa-envelope text-xl"></i></a>
+                </div>
             </div>
-            <div class="flex space-x-6">
-                <a href="#" class="text-slate-400 hover:text-primary transition"><i class="fab fa-linkedin-in text-xl"></i></a>
-                <a href="#" class="text-slate-400 hover:text-primary transition"><i class="fab fa-x text-xl"></i></a>
-                <a href="#" class="text-slate-400 hover:text-primary transition"><i class="fas fa-envelope text-xl"></i></a>
-            </div>
-            
+            <!-- Second row: Centered design credit -->
             <div class="text-center pt-4 border-t border-secondary/10">
                 <p class="text-slate-500">
                     Design by : 
                     <a href="https://linkedin.com/in/muhammadmoiz26/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    class="text-secondary hover:text-white transition-colors duration-300 font-medium">
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="text-secondary hover:text-white transition-colors duration-300 font-medium">
                         Muhammad Moiz
                     </a>
                 </p>
@@ -363,7 +353,7 @@
     </button>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
- <script>
+    <script>
         AOS.init({ duration: 800, once: true, offset: 100 });
 
         // Custom cursor
@@ -404,56 +394,7 @@
         });
         backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-        // File size fetch function
-        async function fetchPdfSize(pdfPath, sizeElement) {
-            try {
-                const response = await fetch(pdfPath);
-                if (!response.ok) throw new Error('Not found');
-                const blob = await response.blob();
-                const bytes = blob.size;
-                if (bytes < 1024 * 1024) {
-                    sizeElement.textContent = (bytes / 1024).toFixed(1) + ' KB';
-                } else {
-                    sizeElement.textContent = (bytes / (1024 * 1024)).toFixed(1) + ' MB';
-                }
-            } catch (e) {
-                sizeElement.textContent = 'N/A';
-            }
-        }
-
-        // Initialize all PDF cards
-        document.querySelectorAll('.glass-card[data-pdf]').forEach(card => {
-            const pdfPath = card.getAttribute('data-pdf');
-            const sizeSpan = card.querySelector('.pdf-size');
-            if (pdfPath && sizeSpan) {
-                fetchPdfSize(pdfPath, sizeSpan);
-            }
-        });
-
-        // Download handler – force download using blob
-        document.querySelectorAll('.download-link').forEach(link => {
-            link.addEventListener('click', async function(e) {
-                e.preventDefault();
-                const url = this.getAttribute('href');
-                try {
-                    const response = await fetch(url);
-                    if (!response.ok) throw new Error('Network response was not ok');
-                    const blob = await response.blob();
-                    const blobUrl = window.URL.createObjectURL(blob);
-                    const a = document.createElement('a');
-                    a.href = blobUrl;
-                    a.download = url.split('/').pop(); // extract filename
-                    document.body.appendChild(a);
-                    a.click();
-                    a.remove();
-                    window.URL.revokeObjectURL(blobUrl);
-                } catch (error) {
-                    alert('Download failed. Please try again later.');
-                }
-            });
-        });
-
-        // Three.js Particle Background
+        // Three.js Particle Background (unchanged)
         const container = document.getElementById('canvas-container');
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -462,7 +403,6 @@
         renderer.setPixelRatio(window.devicePixelRatio);
         container.appendChild(renderer.domElement);
 
-        // Particles
         const particlesGeometry = new THREE.BufferGeometry();
         const particlesCount = 800;
         const posArray = new Float32Array(particlesCount * 3);
