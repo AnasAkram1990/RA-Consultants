@@ -641,32 +641,29 @@
     </section>
 
     <!-- Footer (unchanged, except copyright) -->
-    <footer class="bg-[#0a0c14] py-12 border-t border-secondary/10">
+      <footer class="bg-[#0a0c14] py-12 border-t border-secondary/10">
         <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0">
-                <a href="index.html" class="flex items-center gap-3 space-y-2 group">
-                    <!-- Logo -->
-                    <img src="images/logo.png" alt="RA Logo" class="h-10 w-auto object-contain align-middle">
-                    <!-- Text -->
-                    <span class="text-2xl font-semibold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-none">
-                        CONSULTANTS
-                    </span>
-                </a>
+            <!-- First row: Logo & copyright + Social icons -->
+            <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <a href="index.html" class="flex items-center gap-3 justify-center md:justify-start group">
+                        <img src="images/logo.png" alt="RA Logo" class="h-10 w-auto object-contain">
+                        <span class="text-2xl font-semibold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">CONSULTANTS</span>
+                    </a>
                     <p class="text-slate-500 mt-2">© 2025 Muhammad Anas Akram. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-slate-400 hover:text-primary"><i class="fab fa-linkedin-in text-xl"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-primary"><i class="fab fa-x text-xl"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-primary"><i class="fas fa-envelope text-xl"></i></a>
+                </div>
             </div>
-            <div class="flex space-x-6">
-                <a href="javascript:void(0)" class="text-slate-400 hover:text-primary transition"><i class="fab fa-linkedin-in text-xl"></i></a>
-                <a href="javascript:void(0)" class="text-slate-400 hover:text-primary transition"><i class="fab fa-twitter text-xl"></i></a>
-                <a href="javascript:void(0)" class="text-slate-400 hover:text-primary transition"><i class="fas fa-envelope text-xl"></i></a>
-            </div>
+            <!-- Second row: Centered design credit -->
             <div class="text-center pt-4 border-t border-secondary/10">
                 <p class="text-slate-500">
                     Design by : 
-                    <a href="https://linkedin.com/in/muhammadmoiz26/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    class="text-secondary hover:text-white transition-colors duration-300 font-medium">
+                    <a href="https://linkedin.com/in/muhammadmoiz26/" target="_blank" rel="noopener noreferrer"
+                       class="text-secondary hover:text-white transition-colors duration-300 font-medium">
                         Muhammad Moiz
                     </a>
                 </p>
