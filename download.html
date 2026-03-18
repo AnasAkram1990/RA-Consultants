@@ -9,11 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- EmailJS (optional) -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <!-- Three.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <!-- Google Fonts -->
@@ -128,24 +123,6 @@
         .nav-link.active::after {
             width: 100%;
         }
-        .premium-input {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: all 0.3s;
-            color: #e0e4f0;
-        }
-        .premium-input:focus {
-            border-color: #c6a15b;
-            box-shadow: 0 0 0 3px rgba(198,161,91,0.2);
-            background: rgba(255,255,255,0.05);
-            outline: none;
-        }
-        .float {
-            animation: float 6s ease-in-out infinite;
-        }
-        .glow {
-            animation: glow 3s ease-in-out infinite;
-        }
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -201,6 +178,7 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
+            text-decoration: none;
         }
         .download-btn:hover {
             background: linear-gradient(135deg, #126b80, #623b66);
@@ -214,13 +192,9 @@
 
     <nav class="fixed w-full z-50 py-4 glass border-b border-secondary/10">
         <div class="container mx-auto px-6 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-3 space-y-2 group">
-                <!-- Logo -->
-                <img src="images/logo.png" alt="RA Logo" class="h-10 w-auto object-contain align-middle">
-                <!-- Text -->
-                <span class="text-2xl font-semibold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-none">
-                    CONSULTANTS
-                </span>
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="images/logo.png" alt="RA Logo" class="h-10 w-auto object-contain">
+                <span class="text-2xl font-semibold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">CONSULTANTS</span>
             </a>
             <div class="hidden md:flex space-x-10">
                 <a href="index.html#home" class="nav-link text-sm uppercase tracking-wider font-medium">Home</a>
@@ -230,11 +204,9 @@
                 <a href="downloads.html" class="nav-link text-sm uppercase tracking-wider font-medium active">Downloads</a>
                 <a href="index.html#contact" class="nav-link text-sm uppercase tracking-wider font-medium">Contact</a>
             </div>
-            <a href="index.html#contact" class="hidden md:block px-6 py-2 rounded-full bg-gradient-to-r from-primary to-secondary text-white text-sm font-medium hover:shadow-lg hover:shadow-primary/20 transition">Let's Talk</a>
+            <a href="index.html#contact" class="hidden md:block px-6 py-2 rounded-full bg-gradient-to-r from-primary to-secondary text-white text-sm font-medium hover:shadow-lg">Let's Talk</a>
             <div class="md:hidden">
-                <button id="menu-toggle" class="text-white focus:outline-none">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
+                <button id="menu-toggle" class="text-white"><i class="fas fa-bars text-2xl"></i></button>
             </div>
         </div>
         <div id="mobile-menu" class="hidden md:hidden glass mt-2 mx-4 rounded-xl p-4">
@@ -261,13 +233,11 @@
                     <i class="fas fa-file-invoice text-secondary mr-3"></i> Income Tax Ordinance
                 </h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Income-Tax-Ordinance-2001-31.07.2025.pdf -->
                     <div class="glass-card pdf-card rounded-2xl">
                         <i class="fas fa-file-pdf pdf-icon"></i>
                         <span class="pdf-name">Income-Tax-Ordinance-2001-31.07.2025.pdf</span>
-                        <!-- Manual file size: change this text to actual file size -->
                         <span class="pdf-size">2.4 MB</span>
-                        <a href="pdfs/income-tax/Income-Tax-Ordinance-2001-31.07.2025.pdf" download class="download-btn">
+                        <a href="pdfs/income-tax/Income-Tax-Ordinance-2001-31.07.2025.pdf" target="_blank" class="download-btn">
                             <i class="fas fa-download"></i> Download
                         </a>
                     </div>
@@ -280,17 +250,14 @@
                     <i class="fas fa-chart-line text-secondary mr-3"></i> Sales Tax
                 </h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- GST_Registration.pdf -->
                     <div class="glass-card pdf-card rounded-2xl">
                         <i class="fas fa-file-pdf pdf-icon"></i>
                         <span class="pdf-name">The-SaleslTax-Act-1990-11.03.2019.pdf</span>
-                        <!-- Manual file size: change this text -->
                         <span class="pdf-size">1.8 MB</span>
-                        <a href="pdfs/sales-tax/The-SaleslTax-Act-1990-11.03.2019.pdf" download class="download-btn">
+                        <a href="pdfs/sales-tax/The-SaleslTax-Act-1990-11.03.2019.pdf" target="_blank" class="download-btn">
                             <i class="fas fa-download"></i> Download
                         </a>
                     </div>
-                    <!-- add more pdf cards here -->
                 </div>
             </div>
 
@@ -300,17 +267,14 @@
                     <i class="fas fa-building text-secondary mr-3"></i> SECP
                 </h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- ordinance_act.pdf -->
                     <div class="glass-card pdf-card rounded-2xl">
                         <i class="fas fa-file-pdf pdf-icon"></i>
                         <span class="pdf-name">ordinance_act.pdf</span>
-                        <!-- Manual file size: change this text -->
                         <span class="pdf-size">3.1 MB</span>
-                        <a href="pdfs/secp/ordinance_act.pdf" download class="download-btn">
+                        <a href="pdfs/secp/ordinance_act.pdf" target="_blank" class="download-btn">
                             <i class="fas fa-download"></i> Download
                         </a>
                     </div>
-                    <!-- add more pdf cards here -->
                 </div>
             </div>
         </div>
@@ -328,18 +292,16 @@
                     <p class="text-slate-500 mt-2">© 2025 Muhammad Anas Akram. All rights reserved.</p>
                 </div>
                 <div class="flex space-x-6">
-                    <a href="#" class="text-slate-400 hover:text-primary transition"><i class="fab fa-linkedin-in text-xl"></i></a>
-                    <a href="#" class="text-slate-400 hover:text-primary transition"><i class="fab fa-x text-xl"></i></a>
-                    <a href="#" class="text-slate-400 hover:text-primary transition"><i class="fas fa-envelope text-xl"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-primary"><i class="fab fa-linkedin-in text-xl"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-primary"><i class="fab fa-x text-xl"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-primary"><i class="fas fa-envelope text-xl"></i></a>
                 </div>
             </div>
             <!-- Second row: Centered design credit -->
             <div class="text-center pt-4 border-t border-secondary/10">
                 <p class="text-slate-500">
                     Design by : 
-                    <a href="https://linkedin.com/in/muhammadmoiz26/" 
-                       target="_blank" 
-                       rel="noopener noreferrer"
+                    <a href="https://linkedin.com/in/muhammadmoiz26/" target="_blank" rel="noopener noreferrer"
                        class="text-secondary hover:text-white transition-colors duration-300 font-medium">
                         Muhammad Moiz
                     </a>
@@ -348,7 +310,7 @@
         </div>
     </footer>
 
-    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white shadow-lg hidden hover:bg-secondary transition">
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white shadow-lg hidden hover:bg-secondary">
         <i class="fas fa-arrow-up"></i>
     </button>
 
@@ -356,7 +318,6 @@
     <script>
         AOS.init({ duration: 800, once: true, offset: 100 });
 
-        // Custom cursor
         const cursor = document.getElementById('cursor');
         document.addEventListener('mousemove', (e) => {
             cursor.style.left = e.clientX + 'px';
@@ -367,12 +328,10 @@
             el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-expand'));
         });
 
-        // Mobile menu toggle
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
         menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
 
-        // Smooth scroll for nav links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -386,15 +345,13 @@
             });
         });
 
-        // Back to top
         const backToTop = document.getElementById('back-to-top');
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) backToTop.classList.remove('hidden');
-            else backToTop.classList.add('hidden');
+            backToTop.classList.toggle('hidden', window.scrollY <= 300);
         });
         backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-        // Three.js Particle Background (unchanged)
+        // Three.js Particle Background
         const container = document.getElementById('canvas-container');
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
